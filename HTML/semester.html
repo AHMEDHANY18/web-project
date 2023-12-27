@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>semester calender  </title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #34495e;
+        height: 75px;
+        padding: 0 20px;
+        color: #ecf0f1;
+
+    }
+
+    header a:hover, .active {
+        color: #fff;
+    }
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    a{
+        text-decoration: none;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        border-radius: 5px;
+        background-color: #6674b185;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    header a :hover{    background-color: #f1f1f1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
+    .nav-item {
+        cursor: pointer;
+        color: #ecf0f1;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+    .nav-item a{
+        cursor: pointer;
+        color: #ecf0f1;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .nav-item a:hover{
+        display: inline-block;
+        text-decoration: none;
+        color: #ecf0f1;
+        border-radius: 5px;
+        background-color: #2c3e50;
+    }
+    .nav-item1:hover {
+        color: #94aab9;
+        border-radius: 50px;
+    }
+    a.nav-item1{
+        color: #ffffff;
+        background-color: rgba(16, 79, 174, 0.811);
+        padding: 6px 15px;
+        border-radius: 50px;
+    }
+    .nav-item1 :hover,
+    .nav-item1.active {
+        color: #ffffff;
+        background-color: rgba(16, 79, 174, 0.811);
+        padding: 6px 15px;
+        border-radius: 50px;
+    }
+    .month {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #351abc;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+    }
+
+    .month span {
+      font-size: 18px;
+    }
+
+    .weekdays {
+      display: flex;
+      background-color: #ddd;
+      color: #666;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    .weekdays div {
+      flex: 1;
+      text-align: center;
+    }
+
+    .days {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    .days div {
+      flex: 1;
+      min-width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .days div.active {
+      background-color: #000000;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .event {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .event span {
+      flex: 1;
+      font-size: 14px;
+      color: #000000;
+    }
+
+    .event span.date {
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #351abc;
+      color: white;
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .footer img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <a href="test.html"><img src="logo-removebg-preview.png" alt="Logo"></a>
+        <a href="home-page.html" class="nav-item">Home</a>
+        <a href="Undergraduate-Programs.html" class="nav-item" target="_blank">Undergraduate Programs</a>
+        <div class="nav-item dropdown">
+            <span class="dropbtn">About Us</span>
+            <div class="dropdown-content">
+                <a href="about_us_fit_profile.html" target="_blank">About Us Page</a>
+                <a href="contact.html" target="_parent">Contact Page</a>
+                <a href="Administration_staff_directory.html" target="_blank">Staff Page</a>
+            </div>
+        </div>
+        <a href="dorms.html" class="nav-item" target="_blank">Dorms</a>
+        <a href="lab.html" class="nav-item" target="_blank">Labs</a>
+        <a href="event_calendars.html" class="nav-item1" target="_blank">Event Calendars</a>
+        <a href="pro web/1.html" class="nav-item" target="_blank">Login</a>
+
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  <div class="month">
+    <span class="prev"><</span>
+    <span>Spring 2024</span>
+    <span class="next">></span>
+  </div>
+  <div class="weekdays">
+    <div>Sat</div>
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+  </div>
+  <div class="days">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div class="active">10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+    <div>16</div>
+    <div>17</div>
+    <div>18</div>
+    <div>19</div>
+    <div>20</div>
+    <div>21</div>
+    <div>22</div>
+    <div>23</div>
+    <div>24</div>
+    <div>25</div>
+    <div>26</div>
+    <div>27</div>
+    <div>28</div>
+    <div>29</div>
+    <div>30</div>
+    <div>31</div>
+  </div>
+  <div class="event">
+    <span class="date">10 Feb</span>
+    <span>Semester Starting</span>
+  </div>
+  <div class="event">
+    <span class="date">27 Feb</span>
+    <span>Deadline for adding/dropping courses</span>
+  </div>
+  <div class="event">
+    <span class="date">5 Mar</span>
+    <span>Deadline for courses' withdrawal</span>
+  </div>
+  <div class="event">
+    <span class="date">12 Mar</span>
+    <span>Deadline for semester's withdrawal</span>
+  </div>
+  <div class="event">
+    <span class="date">23 Mar - 2 Apr</span>
+    <span>Midterm Exams</span>
+  </div>
+  <div class="event">
+    <span class="date">6 Apr - 11 Apr</span>
+    <span>Eid Al-Fitr Vacation</span>
+  </div>
+  <div class="event">
+    <span class="date">21 May</span>
+    <span>Last Lectures</span>
+  </div>
+  <div class="event">
+    <span class="date">24 May - 13 Jun</span>
+    <span>Final Exams</span>
+  </div>
+  <div class="event">
+    <span class="date">15 Jun</span>
+    <span>Vacation</span>
+  </div>
+  <div class="footer">
+    <img src="logo-removebg-preview.png" alt="SU Logo">
+    <span>www.suedu.org | 19050 | TAX REG. NO.: 324-000-685</span>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</body>
+</html>

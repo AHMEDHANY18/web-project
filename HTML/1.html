@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            backdrop-filter: blur(3px);
+            height: 100vh;
+            background: url("photo/mmmm.jpg") center / cover no-repeat;
+
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #34495e;
+            height: 75px;
+            padding: 0 20px;
+            color: #ecf0f1;
+
+        }
+
+        header a:hover, .active {
+            color: #fff;
+        }
+        header img {
+            width: 50px;
+            height: 50px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            border-radius: 5px;
+            background-color: #6674b185;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        header a :hover{    background-color: #f1f1f1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        .nav-item {
+            cursor: pointer;
+            color: #ecf0f1;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .nav-item a{
+            cursor: pointer;
+            color: #ecf0f1;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-item a:hover{
+            display: inline-block;
+            text-decoration: none;
+            color: #ecf0f1;
+            border-radius: 5px;
+            background-color: #2c3e50;
+        }
+        .nav-item1:hover {
+            color: #94aab9;
+            border-radius: 50px;
+        }
+        a.nav-item1{
+            color: #ffffff;
+            background-color: rgba(16, 79, 174, 0.811);
+            padding: 6px 15px;
+            border-radius: 50px;
+        }
+        .nav-item1 :hover,
+        .nav-item1.active {
+            color: #ffffff;
+            background-color: rgba(16, 79, 174, 0.811);
+            padding: 6px 15px;
+            border-radius: 50px;
+        }
+
+        .pop {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            max-width: 720px;
+            width: 100%;
+            background: #fff;
+            border: 2px solid #fff;
+            transform: translate(-50%, -50%);
+        }
+
+        .pop .box {
+            display: flex;
+        }
+
+        .box .dital {
+            max-width: 330px;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url(photo/login-img.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .box .content {
+            width: 100%;
+            padding: 35px;
+        }
+
+        form .filed {
+            height: 50px;
+            width: 100%;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        form .filed input {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            padding: 0 15px;
+            font-size: 0.95rem;
+            border-radius: 3px;
+            border: 1px solid #717171;
+        }
+
+        form .filed label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            color: #717171;
+            pointer-events: none;
+            transition: 0.2s ease;
+        }
+
+        .filed input:is(:focus, :valid) {
+            padding: 16px 15px 0;
+        }
+
+        .filed input:focus {
+            border-color: rgb(0, 0, 0);
+        }
+
+        .box a {
+            color: rgb(49, 172, 172);
+            text-decoration: none;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+
+        .box .forgot-pass {
+            display: inline-flex;
+            margin-top: 14px;
+            font-size: 0.95rem;
+        }
+
+        form button {
+            width: 100%;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 14px 0;
+            border-radius: 3px;
+            margin: 25px 0;
+            color: #fff;
+            cursor: pointer;
+            background: #00bcd4;
+            transition: 0.2s ease;
+        }
+
+        form button:hover {
+            background: #0097a7;
+        }
+
+        @media(max-width: 760px) {
+            .pop {
+                width: 95%;
+            }
+
+            .box .dital {
+                display: none;
+            }
+
+            .box .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="test.html"><img src="logo-removebg-preview.png" alt="Logo"></a>
+        <a href="home-page.html" class="nav-item">Home</a>
+        <a href="Undergraduate-Programs.html" class="nav-item" target="_blank">Undergraduate Programs</a>
+        <div class="nav-item dropdown">
+            <span class="dropbtn">About Us</span>
+            <div class="dropdown-content">
+                <a href="about_us_fit_profile.html" target="_blank">About Us Page</a>
+                <a href="contact.html" target="_parent">Contact Page</a>
+                <a href="Administration_staff_directory.html" target="_blank">Staff Page</a>
+            </div>
+        </div>
+        <a href="dorms.html" class="nav-item" target="_blank">Dorms</a>
+        <a href="lab.html" class="nav-item" target="_blank">Labs</a>
+        <a href="event_calendars.html" class="nav-item" target="_blank">Event Calendars</a>
+        <a href="path/to/login-page.html" class="nav-item1" target="_blank">Login</a>
+    </header>
+
+
+    </div>
+    <div class="pop">
+        <div class="box">
+            <div class="dital">
+                <h2>welcome back</h2>
+                <p>please log in using your personal information to stay connected with us.</p>
+            </div>
+
+            <div class="content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="filed">
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="filed">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <br>
+                    <a href="#" class="forgot-pass">Forgot Password</a>
+                    <button type="submit">LOG IN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
