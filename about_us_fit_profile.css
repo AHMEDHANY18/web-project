@@ -97,7 +97,7 @@ a.nav-item1{
 .parallax-container {
     position: relative;
     height: 500px;
-    background: url('/photo/1b1094cd8f6b234df11ffe2ceaea5cb4.jpg') center/cover fixed;
+    background: url('photo/1b1094cd8f6b234df11ffe2ceaea5cb4.jpg') center/cover fixed;
     overflow: hidden;
     display: flex;
     align-items: center;

@@ -101,7 +101,7 @@ a.nav-item1{
 .parallax-container {
     position: relative;
     height: 500px;
-    background: url('/photo//nathan-dumlao-ewGMqs2tmJI-unsplash\ -\ Copy.jpg') center/cover fixed;
+    background: url('photo//nathan-dumlao-ewGMqs2tmJI-unsplash\ -\ Copy.jpg') center/cover fixed;
     overflow: hidden;
     display: flex;
     align-items: center;
